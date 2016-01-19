@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Прийняти</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="AddStudyWindow" xml:space="preserve">
+    <value>Додавання нового долідження</value>
+  </data>
+  <data name="AverageEfficiency" xml:space="preserve">
+    <value>Середня ефективність</value>
+  </data>
+  <data name="BuildChart" xml:space="preserve">
+    <value>Побудувати графік</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Обчислити</value>
+  </data>
+  <data name="CalculationType" xml:space="preserve">
+    <value>Тип обчислення</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="CapacityBase" xml:space="preserve">
+    <value>Базова потужність (МВт)</value>
+  </data>
+  <data name="CapacityFactor" xml:space="preserve">
+    <value>Фактор завантаження (%)</value>
+  </data>
+  <data name="CapacityPeak" xml:space="preserve">
+    <value>Пікова потужність (МВт)</value>
+  </data>
+  <data name="CapacityTotal" xml:space="preserve">
+    <value>Загальна потужність (МВт)</value>
+  </data>
+  <data name="ChartWindow" xml:space="preserve">
+    <value>Графік</value>
+  </data>
+  <data name="ChoseStudy" xml:space="preserve">
+    <value>Оберіть дослідження</value>
+  </data>
+  <data name="ChoseStudyWindow" xml:space="preserve">
+    <value>Вибір дослідження</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Очистити</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Порівняти</value>
+  </data>
+  <data name="CompareMode" xml:space="preserve">
+    <value>Режим порівняння:</value>
+  </data>
+  <data name="CompareStudiesWindow" xml:space="preserve">
+    <value>Порівняння досліджень</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Опис</value>
+  </data>
+  <data name="Emission" xml:space="preserve">
+    <value>Викиди</value>
+  </data>
+  <data name="Emissions" xml:space="preserve">
+    <value>Викиди</value>
+  </data>
+  <data name="EmissionsWindow" xml:space="preserve">
+    <value>Викиди</value>
+  </data>
+  <data name="EnergyBalance" xml:space="preserve">
+    <value>Баланс енергії (ГВт/год)</value>
+  </data>
+  <data name="EnergyBase" xml:space="preserve">
+    <value>Базова енергія (МВт/год)</value>
+  </data>
+  <data name="EnergyDemand" xml:space="preserve">
+    <value>Попит на енергію (ГВт/год)</value>
+  </data>
+  <data name="EnergyPeak" xml:space="preserve">
+    <value>Пікова енергія (МВт/год)</value>
+  </data>
+  <data name="EnergyPumped" xml:space="preserve">
+    <value>EnergyPumped (МВт)</value>
+  </data>
+  <data name="EnergyShortage" xml:space="preserve">
+    <value>Дефіцитна енергія (МВт/год)</value>
+  </data>
+  <data name="EnergySpilled" xml:space="preserve">
+    <value>Залита енергія (МВт/год)</value>
+  </data>
+  <data name="EnergyTotal" xml:space="preserve">
+    <value>Загальна енергія (МВт/год)</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Вихід</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Фільтр</value>
+  </data>
+  <data name="FixsysFile" xml:space="preserve">
+    <value>Fixsys файл</value>
+  </data>
+  <data name="ForCell" xml:space="preserve">
+    <value>Норма вимушеного простою</value>
+  </data>
+  <data name="ForParameter" xml:space="preserve">
+    <value>Для параметру:</value>
+  </data>
+  <data name="ForTypes" xml:space="preserve">
+    <value>по типах</value>
+  </data>
+  <data name="ForYears" xml:space="preserve">
+    <value>по роках</value>
+  </data>
+  <data name="FromFiles" xml:space="preserve">
+    <value>З файлу</value>
+  </data>
+  <data name="FromOtherStudy" xml:space="preserve">
+    <value>З іншого дослідження</value>
+  </data>
+  <data name="FuelDomestic" xml:space="preserve">
+    <value>Вартість власного палива (т.$)</value>
+  </data>
+  <data name="FuelForeign" xml:space="preserve">
+    <value>Вартість іноземного палива (т.$)</value>
+  </data>
+  <data name="FuelTotal" xml:space="preserve">
+    <value>Загальна вартість палива (т. $)</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="HeatValue" xml:space="preserve">
+    <value>Теплотворна здатність палива</value>
+  </data>
+  <data name="Hydrocondition" xml:space="preserve">
+    <value>Гідроумова</value>
+  </data>
+  <data name="HydroconditionsCount" xml:space="preserve">
+    <value>Кількість гідроумов</value>
+  </data>
+  <data name="HydroPlants" xml:space="preserve">
+    <value>Гідроелектростанції:</value>
+  </data>
+  <data name="ListOfStudies" xml:space="preserve">
+    <value>Список досліджень</value>
+  </data>
+  <data name="LOLP" xml:space="preserve">
+    <value>Імовірнісь втрати навантаження (%)</value>
+  </data>
+  <data name="MainProbability" xml:space="preserve">
+    <value>Завантаженість (%)</value>
+  </data>
+  <data name="MaintenanceSpace" xml:space="preserve">
+    <value>MaintenanceSpace (МВт)</value>
+  </data>
+  <data name="MainWindow" xml:space="preserve">
+    <value>Система формування сценаріїв</value>
+  </data>
+  <data name="MersimFile" xml:space="preserve">
+    <value>Mersim файл</value>
+  </data>
+  <data name="MinimumLoad" xml:space="preserve">
+    <value>Мінімальне навантаження (МВт)</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="NumberOfUnits" xml:space="preserve">
+    <value>Кількість блоків</value>
+  </data>
+  <data name="OaM" xml:space="preserve">
+    <value>Вартість експулатації та обслуговування (т. $)</value>
+  </data>
+  <data name="PeakLoad" xml:space="preserve">
+    <value>Пікове навантаження (МВт)</value>
+  </data>
+  <data name="PeakMineng" xml:space="preserve">
+    <value>Peak Mineng (ГВт/год)</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Період</value>
+  </data>
+  <data name="PeriodsCount" xml:space="preserve">
+    <value>Кількість періодів</value>
+  </data>
+  <data name="PlantName" xml:space="preserve">
+    <value>Назва станції</value>
+  </data>
+  <data name="Plants" xml:space="preserve">
+    <value>Електростанції</value>
+  </data>
+  <data name="PlantsTypes" xml:space="preserve">
+    <value>Типи електростанцій</value>
+  </data>
+  <data name="PlantsWindow" xml:space="preserve">
+    <value>Електростанції</value>
+  </data>
+  <data name="PowerPlants" xml:space="preserve">
+    <value>Електростанції</value>
+  </data>
+  <data name="ReserveCapacity" xml:space="preserve">
+    <value>Резервна потужність (МВт)</value>
+  </data>
+  <data name="SaveInExcel" xml:space="preserve">
+    <value>Зберегти в Excel</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Коротка назва</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Показати</value>
+  </data>
+  <data name="ShowOrRead" xml:space="preserve">
+    <value>Показати/Редагувати</value>
+  </data>
+  <data name="Study" xml:space="preserve">
+    <value>Дослідження</value>
+  </data>
+  <data name="StudyData" xml:space="preserve">
+    <value>Дата дослідження</value>
+  </data>
+  <data name="StudyYears" xml:space="preserve">
+    <value>Роки дослідження</value>
+  </data>
+  <data name="ThermalPlants" xml:space="preserve">
+    <value>Термоелектростанції:</value>
+  </data>
+  <data name="TotalCapacity" xml:space="preserve">
+    <value>Загальна потужність (МВт)</value>
+  </data>
+  <data name="TotalGeneration" xml:space="preserve">
+    <value>Загальна генерація (ГВт/год)</value>
+  </data>
+  <data name="TotalInformation" xml:space="preserve">
+    <value>Загальна інформація</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Types" xml:space="preserve">
+    <value>Типи</value>
+  </data>
+  <data name="TypesWindow" xml:space="preserve">
+    <value>Типи електростанцій</value>
+  </data>
+  <data name="UnservedEnergy" xml:space="preserve">
+    <value>Необслужена енергія (ГВт/год)</value>
+  </data>
+  <data name="ValueKG" xml:space="preserve">
+    <value>Вага (кг)</value>
+  </data>
+  <data name="ValuePercent" xml:space="preserve">
+    <value>Значення (%)</value>
+  </data>
+  <data name="VarsysFile" xml:space="preserve">
+    <value>Varsys файл</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Рік</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Ви дісно бажаєте видалити дослідження?</value>
+  </data>
+  <data name="PleaseComnfirmDeleting" xml:space="preserve">
+    <value>Будьласка,підтвердіть видалення</value>
+  </data>
+</root>

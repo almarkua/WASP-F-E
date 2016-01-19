@@ -1,0 +1,31 @@
+﻿<Window x:Class="WASP_F_E.Views.Plants"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:WASP_F_E"
+        Title="{x:Static res:Headers.PlantsWindow}" Height="235" Width="375" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" SizeToContent="Width" Closing="Plants_OnClosing">
+    <Window.Resources>
+        <CollectionViewSource x:Key="Types" Source="{Binding Types}"></CollectionViewSource>
+    </Window.Resources>
+    <Grid>
+        <DataGrid Name="DataTable" ItemsSource="{Binding PlantsList}" AutoGenerateColumns="False" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static res:Headers.ShortName}" Binding="{Binding Path=ShortName}" MinWidth="60"/>
+                <DataGridTextColumn Header="{x:Static res:Headers.FullName}" Binding="{Binding Path=Name}" MinWidth="100"/>
+                <DataGridTextColumn Header="{x:Static res:Headers.AverageEfficiency}" Binding="{Binding Path=AverageEfficiency}" MinWidth="60"/>
+                <DataGridTextColumn Header="{x:Static res:Headers.HeatValue}" Binding="{Binding Path=HeatValue}" MinWidth="60"/>
+                <DataGridTemplateColumn Header="{x:Static res:Headers.Type}"> 
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Type}"></TextBlock>    
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Source={StaticResource Types}}" SelectedItem="{Binding Type}" DisplayMemberPath="Name" IsSynchronizedWithCurrentItem="False"></ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

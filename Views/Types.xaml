@@ -1,0 +1,14 @@
+﻿<Window x:Class="WASP_F_E.Views.Types"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:WASP_F_E"
+        Title="{x:Static res:Headers.TypesWindow}" Height="127" Width="206" ResizeMode="NoResize" SizeToContent="Width" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" Closing="Types_OnClosing">
+    <Grid>
+        <DataGrid Name="DataTable" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static res:Headers.Name}" Binding="{Binding Path=Name}" MinWidth="70"></DataGridTextColumn>
+                <DataGridTextColumn Header="{x:Static res:Headers.Description}" Binding="{Binding Path=Description}" MinWidth="100"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

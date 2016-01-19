@@ -1,0 +1,70 @@
+﻿<Window x:Class="WASP_F_E.Views.CompareStudies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WASP_F_E.Views"
+        xmlns:res="clr-namespace:WASP_F_E"
+        Title="{x:Static res:Headers.CompareStudiesWindow}" Height="382" Width="618"
+        x:Name="Window">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="45*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Separator/>
+        <ToolBarPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}" OpacityMask="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
+            <Button Name="ButtonExcel" ToolTip="{x:Static res:Headers.SaveInExcel}" HorizontalAlignment="Left" Width="25" Height="25" VerticalAlignment="Top" Command="{Binding ExcelClickCommand}" CommandParameter="{Binding ElementName=Window}">
+                <Image Source="../Images/Excel-icon.png"></Image>
+                </Button>
+            <Separator/>
+            <Button x:Name="ButtonChart" ToolTip="x:Static res:Headers.BuildChart" HorizontalAlignment="Left" Width="25" Height="25" VerticalAlignment="Top" Command="{Binding ChartClickCommand}" CommandParameter="{Binding ElementName=DataTable}">
+                <Image Source="../Images/chart.png"/>
+            </Button>
+            <Separator/>
+            <Label Content="{x:Static res:Headers.CompareMode}"/>
+            <ComboBox Name="ComboBoxMode" Height="25" VerticalAlignment="Top" Width="120" ItemsSource="{Binding GroupsList}" SelectedValue="{Binding SelectedGroup}"/>
+            <Separator/>
+            <Label Content="{x:Static res:Headers.ForParameter}"/>
+            <ComboBox Name="TypeComboBox" Height="25" VerticalAlignment="Top" Width="120" ItemsSource="{Binding ParametersList}" SelectedValue="{Binding SelectedParameter}"/>
+        </ToolBarPanel>
+
+        <DataGrid Name="DataTable" Grid.Column="1" Margin="0,5,10,5" Grid.Row="1" ItemsSource="{Binding FiltredDataList}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding StudyName}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Year}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding PlantType}" Visibility="{Binding   
+                                                RelativeSource={RelativeSource AncestorType=Window},  
+                                                Mode=Default,
+                                                Path=DataContext.VisibilityTypes}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Value}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Header="{x:Static res:Headers.Filter}" HorizontalAlignment="Left" Grid.Row="1" Width="160" Margin="5,0,0,5">
+            <Grid HorizontalAlignment="Left" Width="148">
+                <GroupBox Header="Типи блоків" HorizontalAlignment="Left" Width="148" Margin="0,0,0,89">
+                    <ListBox SelectionMode="Multiple" Name="ListBoxTypes" ItemsSource="{Binding Types}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}" IsChecked="{Binding IsSelected}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </GroupBox>
+                <GroupBox Header="Роки" HorizontalAlignment="Left" Margin="0,0,0,42" Width="148" Height="47" VerticalAlignment="Bottom">
+                    <Grid HorizontalAlignment="Right" Width="136" Margin="0,0,0,0">
+                        <Label Content="з:"/>
+                        <TextBox Name="TextBoxYearFor" Margin="20,0,70,1" Text="{Binding FromYear}"/>
+                        <Label Content="по:" Margin="66,0,-66,0"/>
+                        <TextBox Name="TextBoxYearTo" Margin="90,0,0,0" Height="24" VerticalAlignment="Top" Text="{Binding ToYear}"/>
+                    </Grid>
+                </GroupBox>
+                <Button Content="{x:Static res:Headers.Accept}" HorizontalAlignment="Left" Margin="80,0,0,10" Width="68" Height="22" VerticalAlignment="Bottom" Command="{Binding AcceptClickCommand}" CommandParameter="{Binding ElementName=DataTable}"/>
+                <Button Content="{x:Static res:Headers.Clear}" Margin="0,0,0,10" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="65" Command="{Binding ClearClickCommand}"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

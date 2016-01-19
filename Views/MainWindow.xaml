@@ -1,0 +1,15 @@
+﻿<Window x:Class="WASP_F_E.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:WASP_F_E"
+        Title="{x:Static res:Headers.MainWindow}" Height="350" Width="525">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="{x:Static res:Headers.Add}" Click="AddStudyItem_OnClick"></MenuItem>
+            <MenuItem Header="{x:Static res:Headers.ShowOrRead}" Click="ShowItems_OnClick"></MenuItem>
+            <MenuItem Header="{x:Static res:Headers.Compare}" Click="CompareItem_OnClick"></MenuItem>
+            <MenuItem Header="{x:Static res:Headers.Exit}" Click="MenuItem_OnClick"></MenuItem>
+        </Menu>
+        <Image Margin="0,25,0,0" Source="../Images/raes.jpg" />
+    </Grid>
+</Window>

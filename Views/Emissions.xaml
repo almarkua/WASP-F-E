@@ -1,0 +1,39 @@
+﻿<Window x:Class="WASP_F_E.Views.Emissions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:WASP_F_E"
+        Title="{x:Static res:Headers.EmissionsWindow}" Height="382" Width="618"
+        x:Name="Window" Closing="Emissions_OnClosing">
+    <Window.Resources>
+        <CollectionViewSource x:Key="EmissionsCalculationTypes" Source="{Binding EmissionsCalculationTypes}"></CollectionViewSource>
+        <CollectionViewSource x:Key="EmissionsTypes" Source="{Binding EmissionsTypes}"></CollectionViewSource>
+    </Window.Resources>
+    <Grid>
+        <GroupBox Header="{x:Static res:Headers.PowerPlants}" HorizontalAlignment="Left" Width="200">
+            <Grid Margin="0,0,0,0">
+                <Label Content="{x:Static res:Headers.Type}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.573,-0.163" Margin="0,6,0,0"/>
+                <ComboBox Name="ComboBoxTypes" Margin="38,10,5,0" Height="22" VerticalAlignment="Top" ItemsSource="{Binding Types}" SelectedIndex="0" SelectedItem="{Binding SelectedType, Mode=TwoWay}"/>
+                <ListBox Name="ListBoxPlants" Margin="0,37,0,0" ItemsSource="{Binding Plants}" SelectedItem="{Binding SelectedPlant}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static res:Headers.Emissions}" Margin="205,0,0,0">
+            <Grid Margin="0,0,0,0">
+                <DataGrid ItemsSource="{Binding SelectedPlant.Emissions}" AutoGenerateColumns="False" Margin="0,0,0,144">
+                    <DataGrid.Columns>
+                        <DataGridComboBoxColumn  Header="{x:Static res:Headers.Type}" x:Name="TypesComboBox" ItemsSource="{Binding Source={StaticResource EmissionsTypes}}" SelectedItemBinding="{Binding Type}" MinWidth="100"/>
+                        <DataGridComboBoxColumn Header="{x:Static res:Headers.CalculationType}" x:Name="ComboBoxCalculationTypes" SelectedValueBinding="{Binding Path=CalculationType}" ItemsSource="{Binding Source={StaticResource EmissionsCalculationTypes}}" MinWidth="100"/>
+                        <DataGridTextColumn Header="{x:Static res:Headers.ValuePercent}" Binding="{Binding Path=Value}" MinWidth="70"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid ItemsSource="{Binding EmissionsTypes}" AutoGenerateColumns="False" Height="79" VerticalAlignment="Bottom" Margin="0,0,0,37">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{x:Static res:Headers.Name}" Binding="{Binding Name}" MinWidth="120"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{x:Static res:Headers.Description}" Binding="{Binding Description}" MinWidth="200"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="{x:Static res:Headers.Types}" Margin="0,0,300,116" Height="26" VerticalAlignment="Bottom"/>
+                <Button Content="{x:Static res:Headers.Calculate}" Margin="0,0,10,11" Command="{Binding CalculateClickCommand}" CommandParameter="{Binding ElementName=Window}" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
